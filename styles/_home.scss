@@ -1,0 +1,142 @@
+.container {
+  h1 {
+    font-size: 2em;
+    @include sm {
+      font-size: 3em;
+    }
+  }
+  h2 {
+    font-size: 1em;
+    @include sm {
+      font-size: 1.6em;
+    }
+  }
+  p {
+    font-size: 0.8em;
+    @include sm {
+      font-size: 1.2em;
+    }
+  }
+  .header {
+    margin: 10px 20px 0px 20px;
+    @include sm {
+      font-size: 1.5em;
+      font-weight: 200;
+      margin-bottom: 0;
+    }
+  }
+  .about {
+    margin: 15px 20px;
+  }
+  .resume {
+    margin: 20px;
+    h2 {
+      font-size: 1em;
+      @include sm {
+        font-size: 1.5em;
+      }
+    }
+    h3 {
+      font-size: 0.9em;
+      @include sm {
+        font-size: 1.2em;
+      }
+    }
+    h4 {
+      font-size: 0.8em;
+      @include sm {
+        font-size: 1em;
+      }
+    }
+    p {
+      @include sm {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .work {
+    margin: 20px;
+    h2 {
+      font-size: 1em;
+      @include sm {
+        font-size: 1.5em;
+      }
+    }
+    h3 {
+      font-size: 0.9em;
+      @include sm {
+        font-size: 1.2em;
+      }
+    }
+    h4 {
+      font-size: 0.8em;
+      @include sm {
+        font-size: 1em;
+      }
+    }
+    p {
+      color: $Grey2;
+      @include sm {
+        font-size: 0.8em;
+      }
+    }
+  }
+  .skills {
+    h2 {
+      @include sm {
+        font-size: 1.5em;
+      }
+    }
+    margin: 20px;
+    ul {
+      padding-left: 0;
+    }
+    li {
+      text-transform: uppercase;
+      background-color: #ddd;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      border-radius: 16px;
+      font-size: 0.8em;
+    }
+  }
+  .footer {
+    text-align: center;
+    margin: 20px;
+    p {
+      margin-bottom: 0;
+      @include sm {
+        font-size: 1em;
+      }
+    }
+    i {
+      margin-top: 10px;
+      font-size: 1.5em;
+      @include sm {
+        padding: 0 5px;
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+a {
+  color: $Navy;
+  transition: color 0.2s ease;
+  &:hover {
+    color: $Teal;
+  }
+}
+
+.title {
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+}
