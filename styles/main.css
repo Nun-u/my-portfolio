@@ -1,1 +1,291 @@
-@import "vendors/bootstrap.min.css";@import "vendors/fullpage.css";@import "vendors/owl.carousel.min.css";@import url("https://fonts.cdnfonts.com/css/gotham");body,html{background-color:#f5f4fd;font-family:"Gotham",sans-serif;color:#202a44}h1{font-family:"Gotham Black",sans-serif}h2{font-weight:600}.teal{color:#30b09a}.grey{color:#a7a7a7}.center-align{display:block}@media (min-width:768px){.center-align{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}}.container h1{font-size:2em}@media (min-width:576px){.container h1{font-size:3em}}.container h2{font-size:1em}@media (min-width:576px){.container h2{font-size:1.6em}}.container p{font-size:0.8em}@media (min-width:576px){.container p{font-size:1.2em}}.container .header{margin:10px 20px 0px 20px}@media (min-width:576px){.container .header{font-size:1.5em;font-weight:200;margin-bottom:0}}.container .about{margin:15px 20px}.container .resume{margin:20px}.container .resume h2{font-size:1em}@media (min-width:576px){.container .resume h2{font-size:1.5em}}.container .resume h3{font-size:0.9em}@media (min-width:576px){.container .resume h3{font-size:1.2em}}.container .resume h4{font-size:0.8em}@media (min-width:576px){.container .resume h4{font-size:1em}}@media (min-width:576px){.container .resume p{font-size:0.8em}}.container .work{margin:20px}.container .work h2{font-size:1em}@media (min-width:576px){.container .work h2{font-size:1.5em}}.container .work h3{font-size:0.9em}@media (min-width:576px){.container .work h3{font-size:1.2em}}.container .work h4{font-size:0.8em}@media (min-width:576px){.container .work h4{font-size:1em}}.container .work p{color:#a7a7a7}@media (min-width:576px){.container .work p{font-size:0.8em}}.container .skills{margin:20px}@media (min-width:576px){.container .skills h2{font-size:1.5em}}.container .skills ul{padding-left:0}.container .skills li{text-transform:uppercase;background-color:#ddd;border:none;padding:10px 20px;text-align:center;text-decoration:none;display:inline-block;margin:4px 2px;border-radius:16px;font-size:0.8em}.container .footer{text-align:center;margin:20px}.container .footer p{margin-bottom:0}@media (min-width:576px){.container .footer p{font-size:1em}}.container .footer i{margin-top:10px;font-size:1.5em}@media (min-width:576px){.container .footer i{padding:0 5px;font-size:2em}}a{color:#202a44;-webkit-transition:color 0.2s ease;transition:color 0.2s ease}a:hover{color:#30b09a}.title{-webkit-transition:all 0.5s ease-in-out;transition:all 0.5s ease-in-out;opacity:1}.fade{opacity:0}
+@import "vendors/bootstrap.min.css";
+@import "vendors/fullpage.css";
+@import "vendors/owl.carousel.min.css";
+@import url("https://fonts.cdnfonts.com/css/gotham");
+body,
+html {
+  background-color: #f5f4fd;
+  font-family: "Gotham", sans-serif;
+  color: #202a44;
+}
+
+h1 {
+  font-family: "Gotham Black", sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+.teal {
+  color: #30b09a;
+}
+
+.grey {
+  color: #a7a7a7;
+}
+
+.center-align {
+  display: block;
+}
+@media (min-width: 768px) {
+  .center-align {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.container h1 {
+  font-size: 2em;
+}
+@media (min-width: 576px) {
+  .container h1 {
+    font-size: 3em;
+  }
+}
+.container h2 {
+  font-size: 1em;
+}
+@media (min-width: 576px) {
+  .container h2 {
+    font-size: 1.6em;
+  }
+}
+.container p {
+  font-size: 0.8em;
+}
+@media (min-width: 576px) {
+  .container p {
+    font-size: 1.2em;
+  }
+}
+.container .header {
+  margin: 10px 20px 0px 20px;
+}
+@media (min-width: 576px) {
+  .container .header {
+    font-size: 1.5em;
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+}
+.container .about {
+  margin: 15px 20px;
+}
+.container .resume {
+  margin: 20px;
+}
+.container .resume h2 {
+  font-size: 1em;
+}
+@media (min-width: 576px) {
+  .container .resume h2 {
+    font-size: 1.5em;
+  }
+}
+.container .resume h3 {
+  font-size: 0.9em;
+}
+@media (min-width: 576px) {
+  .container .resume h3 {
+    font-size: 1.2em;
+  }
+}
+.container .resume h4 {
+  font-size: 0.8em;
+}
+@media (min-width: 576px) {
+  .container .resume h4 {
+    font-size: 1em;
+  }
+}
+@media (min-width: 576px) {
+  .container .resume p {
+    font-size: 0.8em;
+  }
+}
+.container .work {
+  margin: 20px;
+}
+.container .work h2 {
+  font-size: 1em;
+}
+@media (min-width: 576px) {
+  .container .work h2 {
+    font-size: 1.5em;
+  }
+}
+.container .work h3 {
+  font-size: 0.9em;
+}
+@media (min-width: 576px) {
+  .container .work h3 {
+    font-size: 1.2em;
+  }
+}
+.container .work h4 {
+  font-size: 0.8em;
+}
+@media (min-width: 576px) {
+  .container .work h4 {
+    font-size: 1em;
+  }
+}
+.container .work p {
+  color: #a7a7a7;
+}
+@media (min-width: 576px) {
+  .container .work p {
+    font-size: 0.8em;
+  }
+}
+.container .skills {
+  margin: 20px;
+}
+@media (min-width: 576px) {
+  .container .skills h2 {
+    font-size: 1.5em;
+  }
+}
+.container .skills ul {
+  padding-left: 0;
+}
+.container .skills li {
+  text-transform: uppercase;
+  background-color: #ddd;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 16px;
+  font-size: 0.8em;
+}
+.container .footer {
+  text-align: center;
+  margin: 20px;
+}
+.container .footer p {
+  margin-bottom: 0;
+}
+@media (min-width: 576px) {
+  .container .footer p {
+    font-size: 1em;
+  }
+}
+.container .footer i {
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+@media (min-width: 576px) {
+  .container .footer i {
+    padding: 0 5px;
+    font-size: 2em;
+  }
+}
+
+a {
+  color: #202a44;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #30b09a;
+}
+
+.title {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.owl-nav {
+  margin: 0 20px;
+  display: inline-block;
+}
+.owl-nav .owl-prev {
+  outline: none;
+}
+.owl-nav .owl-prev i {
+  color: #202a44;
+}
+.owl-nav .owl-prev:hover i {
+  color: #30b09a;
+}
+.owl-nav .owl-next {
+  margin: 0 10px;
+  outline: none;
+}
+.owl-nav .owl-next i {
+  color: #202a44;
+}
+.owl-nav .owl-next:hover i {
+  color: #30b09a;
+}
+
+.owl-theme .owl-buttons div {
+  display: block;
+}
+
+.owl-dots {
+  margin: 20px;
+}
+@media (max-width: 500px) {
+  .owl-dots {
+    padding: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 320px) {
+  .owl-dots {
+    display: none;
+  }
+}
+.owl-dots button.owl-dot {
+  outline: none;
+}
+.owl-dots button.owl-dot span {
+  background: none repeat scroll 0 0 rgb(210, 210, 210);
+  border-radius: 20px;
+  display: block;
+  height: 12px;
+  margin: 0px 12px;
+  opacity: 0.5;
+  width: 12px;
+}
+@media (min-width: 500px) {
+  .owl-dots button.owl-dot span {
+    margin-left: 0;
+  }
+}
+.owl-dots button.owl-dot span:hover {
+  background: none repeat scroll 0 0 white;
+  opacity: 1;
+}
+@media (max-width: 320px) {
+  .owl-dots button.owl-dot span {
+    height: 6px;
+    width: 6px;
+  }
+}
+.owl-dots button.owl-dot.active span {
+  background: none repeat scroll 0 0 #30b09a;
+  opacity: 1;
+}

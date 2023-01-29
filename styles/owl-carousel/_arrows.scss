@@ -1,0 +1,31 @@
+.owl-nav {
+  margin: 0 20px;
+  display: inline-block;
+  .owl-prev {
+    outline: none;
+    i {
+      color: $Navy;
+    }
+    &:hover {
+      i {
+        color: $Teal;
+      }
+    }
+  }
+  .owl-next {
+    margin: 0 10px;
+    outline: none;
+    i {
+      color: $Navy;
+    }
+    &:hover {
+      i {
+        color: $Teal;
+      }
+    }
+  }
+}
+
+.owl-theme .owl-buttons div {
+  display: block;
+}

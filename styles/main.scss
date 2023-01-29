@@ -3,8 +3,12 @@
 @import "vendors/fullpage.css";
 @import "vendors/owl.carousel.min.css";
 
-// Other
+// General
 @import "_template.scss";
 @import "_responsive.scss";
 @import "_functions.scss";
 @import "_home.scss";
+
+// Owl-Carousel
+@import "owl-carousel/_arrows";
+@import "owl-carousel/_dots";
