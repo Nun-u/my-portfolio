@@ -198,11 +198,9 @@ a {
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
-a h3 {
-  text-decoration: underline;
-}
 a:hover {
   color: #30b09a;
+  text-decoration: underline;
 }
 
 .title {
