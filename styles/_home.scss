@@ -126,6 +126,10 @@
 }
 
 a {
+  text-decoration: none;
+  h3 {
+    text-decoration: underline;
+  }
   color: $Navy;
   transition: color 0.2s ease;
   &:hover {
