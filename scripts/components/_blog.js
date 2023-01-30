@@ -12,6 +12,8 @@ const blogStore = [
 
 setupPosts();
 
+const hammer = new Hammer(blogPosts[i]);
+
 function setupPosts() {
   for (let i = 0; i < blogPosts.length; i++) {
     blogPosts[i].addEventListener("click", function (clickEvent) {
@@ -19,8 +21,7 @@ function setupPosts() {
       loadPost(clickEvent);
       unloadPost();
     });
-    blogPosts[i].addEventListener("touchend", function (mobileEvent) {
-      mobileEvent.target.removeEventListener("touchend", arguments.callee);
+    hammer.on("tap", function (mobileEvent) {
       loadPost(mobileEvent);
       unloadPost();
     });
