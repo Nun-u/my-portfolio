@@ -19,8 +19,8 @@ function setupPosts() {
       loadPost(clickEvent);
       unloadPost();
     });
-    blogPosts[i].addEventListener("touchstart", function (mobileEvent) {
-      mobileEvent.target.removeEventListener("touchstart", arguments.callee);
+    blogPosts[i].addEventListener("touchend", function (mobileEvent) {
+      mobileEvent.target.removeEventListener("touchend", arguments.callee);
       loadPost(mobileEvent);
       unloadPost();
     });
