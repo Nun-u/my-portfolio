@@ -14,62 +14,77 @@ setupPosts();
 
 function setupPosts() {
   for (let i = 0; i < blogPosts.length; i++) {
-    blogPosts[i].addEventListener("click", function (event) {
-      const blogNum = event.target.classList[1];
-      let formattedContent =
-        "<span class='blog-title'>" +
-        blogStore[blogNum - 1].title +
-        " | " +
-        blogStore[blogNum - 1].timeStamp +
-        "</span><br><br>";
-      formattedContent = formattedContent + blogStore[blogNum - 1].content;
-      formattedContent =
-        formattedContent + "<br><br><span class='back-btn'>Go back.</span>";
-
-      event.target.parentElement.classList.add("active-list");
-
-      let listItems = document
-        .querySelector(".blog-list")
-        .querySelectorAll(".blog-post");
-      for (let item of listItems) {
-        if (!item.classList.contains(blogNum))
-          item.classList.add("inactive-blog");
-      }
-
-      event.target.innerHTML = formattedContent;
-      event.target.classList.add("active-blog");
-
-      event.target.removeEventListener("click", arguments.callee);
-      activePost();
+    blogPosts[i].addEventListener("click", function (clickEvent) {
+      loadPost(clickEvent);
+      clickEvent.target.removeEventListener("click", arguments.callee);
+      unloadPost();
+    });
+    blogPosts[i].addEventListener("touchstart", function (mobileEvent) {
+      loadPost(mobileEvent);
+      mobileEvent.target.removeEventListener("touchstart", arguments.callee);
+      unloadPost();
     });
   }
 }
 
-function activePost() {
+function loadPost(event) {
+  const blogNum = event.target.classList[1];
+  let formattedContent =
+    "<span class='blog-title'>" +
+    blogStore[blogNum - 1].title +
+    " | " +
+    blogStore[blogNum - 1].timeStamp +
+    "</span><br><br>";
+  formattedContent = formattedContent + blogStore[blogNum - 1].content;
+  formattedContent =
+    formattedContent + "<br><br><span class='back-btn'>Go back.</span>";
+
+  event.target.parentElement.classList.add("active-list");
+
+  let listItems = document
+    .querySelector(".blog-list")
+    .querySelectorAll(".blog-post");
+  for (let item of listItems) {
+    if (!item.classList.contains(blogNum)) item.classList.add("inactive-blog");
+  }
+
+  event.target.innerHTML = formattedContent;
+  event.target.classList.add("active-blog");
+}
+
+function unloadPost() {
   const btnBack = document.getElementsByClassName("back-btn");
-  const blogPost = document.getElementsByClassName("active-blog");
-  const blogNum = blogPost[0].classList[1];
   const postsList = document
     .querySelector(".blog-list")
     .querySelectorAll(".blog-post");
 
-  console.log(btnBack);
   for (let i = 0; i < btnBack.length; i++) {
-    btnBack[i].addEventListener("click", function (btnEvent) {
-      blogPost[0].innerText = blogStore[blogNum - 1].title;
-      for (let item of postsList) {
-        item.classList.remove("active-blog");
-        item.classList.remove("inactive-blog");
-      }
-      document
-        .getElementsByClassName("blog-list")[0]
-        .classList.remove("active-list");
+    btnBack[i].addEventListener("click", function (e) {
+      postTagRemovals(postsList);
+    });
+    btnBack[i].addEventListener("touchstart", function (e) {
+      postTagRemovals(postsList);
     });
     btnBack[i].removeEventListener("click", arguments.callee);
+    btnBack[i].removeEventListener("touchstart", arguments.callee);
   }
   for (post of postsList) {
     post.removeEventListener("click", arguments.callee);
+    post.removeEventListener("touchstart", arguments.callee);
   }
-
   setupPosts();
+}
+
+function postTagRemovals(postsList) {
+  const blogPost = document.getElementsByClassName("active-blog");
+  const blogNum = blogPost[0].classList[1];
+
+  blogPost[0].innerText = blogStore[blogNum - 1].title;
+  for (let item of postsList) {
+    item.classList.remove("active-blog");
+    item.classList.remove("inactive-blog");
+  }
+  document
+    .getElementsByClassName("blog-list")[0]
+    .classList.remove("active-list");
 }
