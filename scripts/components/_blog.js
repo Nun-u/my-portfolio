@@ -15,13 +15,13 @@ setupPosts();
 function setupPosts() {
   for (let i = 0; i < blogPosts.length; i++) {
     blogPosts[i].addEventListener("click", function (clickEvent) {
-      loadPost(clickEvent);
       clickEvent.target.removeEventListener("click", arguments.callee);
+      loadPost(clickEvent);
       unloadPost();
     });
     blogPosts[i].addEventListener("touchstart", function (mobileEvent) {
-      loadPost(mobileEvent);
       mobileEvent.target.removeEventListener("touchstart", arguments.callee);
+      loadPost(mobileEvent);
       unloadPost();
     });
   }
