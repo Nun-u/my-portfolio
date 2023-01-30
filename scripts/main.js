@@ -9,3 +9,4 @@
 // ===================
 // @prepros-prepend components/_typewriter.js
 // @prepros-prepend components/_carousel.js
+// @prepros-prepend components/_blog.js

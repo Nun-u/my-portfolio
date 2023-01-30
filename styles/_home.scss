@@ -28,34 +28,35 @@
   .about {
     margin: 15px 20px;
   }
-  .resume {
-    margin: 20px;
-    h2 {
-      font-size: 1em;
-      @include sm {
-        font-size: 1.5em;
-      }
-    }
-    h3 {
-      font-size: 0.9em;
-      @include sm {
-        font-size: 1.2em;
-      }
-    }
-    h4 {
-      font-size: 0.8em;
-      @include sm {
-        font-size: 1em;
-      }
-    }
-    p {
-      @include sm {
-        font-size: 0.8em;
-      }
-    }
-  }
+  // .resume {
+  //   margin: 20px;
+  //   h2 {
+  //     font-size: 1em;
+  //     @include sm {
+  //       font-size: 1.5em;
+  //     }
+  //   }
+  //   h3 {
+  //     font-size: 0.9em;
+  //     @include sm {
+  //       font-size: 1.2em;
+  //     }
+  //   }
+  //   h4 {
+  //     font-size: 0.8em;
+  //     @include sm {
+  //       font-size: 1em;
+  //     }
+  //   }
+  //   p {
+  //     @include sm {
+  //       font-size: 0.8em;
+  //     }
+  //   }
+  // }
 
-  .work {
+  .work,
+  .resume {
     margin: 20px;
     h2 {
       font-size: 1em;
@@ -123,9 +124,54 @@
       }
     }
   }
+
+  .blog {
+    font-size: 0.9em;
+    @include sm {
+      font-size: 1.2em;
+    }
+    margin: 20px;
+
+    .blog-list {
+      list-style-type: disc;
+      padding-left: 40px;
+      transition: all 0.5s ease-in-out;
+    }
+    .active-list {
+      list-style-type: none;
+      padding: 0 !important;
+    }
+
+    .active-blog {
+      transition: all 0.5s ease-in-out;
+
+      font-size: 0.8em;
+      list-style: none;
+      .blog-title {
+        color: $Teal;
+        font-weight: 600;
+      }
+      &:hover {
+        color: $Navy;
+        text-decoration: none;
+      }
+      .back-btn {
+        font-weight: 200;
+        transition: color 0.2s ease;
+        &:hover {
+          color: $Teal;
+          text-decoration: underline;
+        }
+      }
+    }
+    .inactive-blog {
+      display: none;
+    }
+  }
 }
 
-a {
+a,
+.blog li {
   text-decoration: none;
   color: $Navy;
   transition: color 0.2s ease;
