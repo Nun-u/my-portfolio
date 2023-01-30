@@ -79,70 +79,47 @@ h2 {
 .container .about {
   margin: 15px 20px;
 }
+.container .work,
 .container .resume {
   margin: 20px;
 }
+.container .work h2,
 .container .resume h2 {
   font-size: 1em;
 }
 @media (min-width: 576px) {
-  .container .resume h2 {
+  .container .work h2,
+.container .resume h2 {
     font-size: 1.5em;
   }
 }
+.container .work h3,
 .container .resume h3 {
   font-size: 0.9em;
 }
 @media (min-width: 576px) {
-  .container .resume h3 {
+  .container .work h3,
+.container .resume h3 {
     font-size: 1.2em;
   }
 }
+.container .work h4,
 .container .resume h4 {
   font-size: 0.8em;
 }
 @media (min-width: 576px) {
-  .container .resume h4 {
+  .container .work h4,
+.container .resume h4 {
     font-size: 1em;
   }
 }
-@media (min-width: 576px) {
-  .container .resume p {
-    font-size: 0.8em;
-  }
-}
-.container .work {
-  margin: 20px;
-}
-.container .work h2 {
-  font-size: 1em;
-}
-@media (min-width: 576px) {
-  .container .work h2 {
-    font-size: 1.5em;
-  }
-}
-.container .work h3 {
-  font-size: 0.9em;
-}
-@media (min-width: 576px) {
-  .container .work h3 {
-    font-size: 1.2em;
-  }
-}
-.container .work h4 {
-  font-size: 0.8em;
-}
-@media (min-width: 576px) {
-  .container .work h4 {
-    font-size: 1em;
-  }
-}
-.container .work p {
+.container .work p,
+.container .resume p {
   color: #a7a7a7;
 }
 @media (min-width: 576px) {
-  .container .work p {
+  .container .work p,
+.container .resume p {
     font-size: 0.8em;
   }
 }
