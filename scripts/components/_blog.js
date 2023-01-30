@@ -21,7 +21,8 @@ function setupPosts() {
       loadPost(clickEvent);
       unloadPost();
     });
-    hammer.on("tap", function (mobileEvent) {
+    blogPosts[i].addEventListener("touchend", function (mobileEvent) {
+      mobileEvent.target.removeEventListener("touchend", arguments.callee);
       loadPost(mobileEvent);
       unloadPost();
     });
