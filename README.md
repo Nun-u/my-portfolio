@@ -12,5 +12,4 @@ Sure! Just provide a link to the repository somewhere in your website/repository
 *Wow how easy is it when you aren't using a million frameworks hehe!*
 
 ## What's next?
-- I'll probably look into adding a datastore of some sort for all info, that way it can be more easily customized!
-- Maybe some other pages: blog, more in-depth projects info, idk (which is why I have a few random unused libraries in there)
+- Don't know to be honest! Hoping to keep it a simple one-pager, so don't want to bulk it up much more...
