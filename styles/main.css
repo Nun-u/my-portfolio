@@ -51,6 +51,7 @@ h2 {
   }
 }
 .container h2 {
+  margin-bottom: 20px;
   font-size: 1em;
 }
 @media (min-width: 576px) {
@@ -89,7 +90,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .container .work h2,
-.container .resume h2 {
+  .container .resume h2 {
     font-size: 1.5em;
   }
 }
@@ -99,7 +100,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .container .work h3,
-.container .resume h3 {
+  .container .resume h3 {
     font-size: 1.2em;
   }
 }
@@ -109,7 +110,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .container .work h4,
-.container .resume h4 {
+  .container .resume h4 {
     font-size: 1em;
   }
 }
@@ -119,7 +120,7 @@ h2 {
 }
 @media (min-width: 576px) {
   .container .work p,
-.container .resume p {
+  .container .resume p {
     font-size: 0.8em;
   }
 }
